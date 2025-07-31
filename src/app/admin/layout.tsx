@@ -1,6 +1,6 @@
 import React from "react";
 
-function RootLayout({
+function AdminLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
@@ -10,4 +10,4 @@ function RootLayout({
   return <>{children}</>;
 }
 
-export default RootLayout;
+export default AdminLayout;
