@@ -130,6 +130,7 @@ export const CategoryTableRow = ({
                   handleEditClick({
                     ...category,
                     intent: "update",
+                    image: undefined,
                   })
                 }
               >
