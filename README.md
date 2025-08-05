@@ -1,36 +1,75 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# GadgetApp Admin Dashboard
+
+This is the admin dashboard for GadgetApp, a modern e-commerce platform for the latest tech gadgets. This dashboard is built with Next.js, Supabase, and Tailwind CSS.
+
+There is also a landing page for the user-facing mobile app included in this project.
+
+## Features
+
+The admin dashboard allows you to manage:
+
+-   **Dashboard:** View key metrics and statistics.
+-   **Products:** Add, edit, and delete products.
+-   **Categories:** Manage product categories.
+-   **Orders:** View and manage customer orders.
+
+## Tech Stack
+
+-   [Next.js](https://nextjs.org/) - React framework for production.
+-   [Supabase](https://supabase.io/) - Open source Firebase alternative for database, auth, and storage.
+-   [Tailwind CSS](https://tailwindcss.com/) - A utility-first CSS framework.
+-   [TypeScript](https://www.typescriptlang.org/) - Typed superset of JavaScript.
+-   [Radix UI](https://www.radix-ui.com/) - Unstyled, accessible UI components.
+-   [Zod](https://zod.dev/) - TypeScript-first schema validation.
+-   [React Hook Form](https://react-hook-form.com/) - Performant, flexible and extensible forms with easy-to-use validation.
+-   [Recharts](https://recharts.org/) - A composable charting library built on React components.
 
 ## Getting Started
 
-First, run the development server:
+Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Prerequisites
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+You need to have [Node.js](https://nodejs.org/) (version 20 or later) and a package manager like [npm](https://www.npmjs.com/), [yarn](https://yarnpkg.com/), or [pnpm](https://pnpm.io/) installed.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Installation
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1.  **Clone the repository:**
 
-## Learn More
+    ```bash
+    git clone https://github.com/your-username/shop-admin.git
+    cd shop-admin
+    ```
 
-To learn more about Next.js, take a look at the following resources:
+2.  **Install dependencies:**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+    ```bash
+    npm install
+    # or
+    yarn install
+    # or
+    pnpm install
+    ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Environment Variables
 
-## Deploy on Vercel
+This project uses Supabase for its backend. You will need to create a `.env.local` file in the root of the project and add your Supabase credentials.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1.  Go to [Supabase](https://supabase.com/) and create a new project.
+2.  Navigate to your project's **Settings** > **API**.
+3.  Find your **Project URL** and **Project API keys** (the `anon` `public` key).
+4.  Create a `.env.local` file in the root of your project and add the following:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+    ```env
+    NEXT_PUBLIC_SUPABASE_URL=your-supabase-project-url
+    NEXT_PUBLIC_SUPABASE_ANON_KEY=your-supabase-anon-key
+    ```
+
+## Available Scripts
+
+In the project directory, you can run:
+
+-   `npm run dev`: Runs the app in development mode with Turbopack. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+-   `npm run build`: Builds the app for production.
+-   `npm run start`: Starts a production server.
+-   `npm run lint`: Runs the linter to check for code quality issues.
