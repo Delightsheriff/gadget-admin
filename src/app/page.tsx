@@ -247,11 +247,11 @@ export default function Home() {
 
       <footer className="bg-[#1BC464] text-white">
         <Link
-          href={`https://www.youtube.com/@codewithlari`}
+          href={`https://www.delightsheriff.tech`}
           target="_blank"
           className="container mx-auto px-4 text-center"
         >
-          <p>@ codewithlari</p>
+          <p>Delight Sheriff</p>
         </Link>
       </footer>
     </div>
