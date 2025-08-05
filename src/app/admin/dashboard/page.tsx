@@ -1,5 +1,20 @@
-import React from "react";
+import { getMonthlyOrders } from "@/actions/orders";
+import { getCategoryData } from "@/actions/categories";
+import { getLatestUsers } from "@/actions/auth";
+import PageComponent from "./page-component";
 
-export default function AdminDashboard() {
-  return <div>Admin Dashboard</div>;
-}
+const Dashboard = async () => {
+  const monthlyOrders = await getMonthlyOrders();
+  const categoryData = await getCategoryData();
+  const latestUsers = await getLatestUsers();
+
+  return (
+    <PageComponent
+      latestUsers={latestUsers}
+      monthlyOrders={monthlyOrders}
+      categoryData={categoryData}
+    />
+  );
+};
+
+export default Dashboard;
